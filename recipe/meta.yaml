@@ -1,4 +1,4 @@
-{% set version = "1.7-3" %}
+{% set version = "1.7-4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/e1071_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/e1071/e1071_{{ version }}.tar.gz
-  sha256: bb2dba526b673ec3a573befe365e3500b773593f0384fd6694e0835496bcc25d
+  sha256: e6ab871b06f500dc65f8f781cc7253f43179698784c06dab040b4aa6592f2309
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -51,11 +51,9 @@ test:
 about:
   home: https://CRAN.R-project.org/package=e1071
   license: GPL-2 | GPL-3
-  summary: Functions for latent class analysis, short time Fourier transform, fuzzy clustering,
-    support vector machines, shortest path computation, bagged clustering, naive Bayes
-    classifier, ...
+  summary: Functions for latent class analysis, short time Fourier transform, fuzzy clustering, support vector machines, shortest path computation, bagged clustering, naive Bayes classifier, ...
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
