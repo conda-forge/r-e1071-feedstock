@@ -1,4 +1,4 @@
-{% set version = "1.7-9" %}
+{% set version = "1.7-11" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/e1071_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/e1071/e1071_{{ version }}.tar.gz
-  sha256: 9bf9a15e7ce0b9b1a57ce3048d29cbea7f2a5bb2e91271b1b6aaafe07c852226
+  sha256: 48c18e10e7cabc742d37b563672e2eddb6061f2378b69e5563be79ab9948d92f
 
 build:
   merge_build_host: true  # [win]
