@@ -3,6 +3,7 @@ About r-e1071-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-e1071-feedstock/blob/main/LICENSE.txt)
 
+
 About r-e1071
 -------------
 
@@ -11,6 +12,7 @@ Home: https://CRAN.R-project.org/package=e1071
 Package license: GPL-2.0-or-later
 
 Summary: Functions for latent class analysis, short time Fourier transform, fuzzy clustering, support vector machines, shortest path computation, bagged clustering, naive Bayes classifier, ...
+
 About r-e1071
 -------------
 
@@ -195,7 +197,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
