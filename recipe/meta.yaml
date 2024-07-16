@@ -1,6 +1,5 @@
 {% set version = "1.7-14" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-e1071
@@ -13,8 +12,7 @@ source:
   sha256: 754d97ab073acc07b909a190f87f021e31e07269c8632c53166a6c2843e65195
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -25,7 +23,9 @@ requirements:
     - r-proxy                    # [build_platform != target_platform]
     - r-class                    # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
@@ -44,7 +44,6 @@ requirements:
     - r-proxy
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-class
     - r-proxy
 
